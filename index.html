@@ -7,8 +7,8 @@
       Case Problem 2
 
       Spice Bowl Payment Form
-      Author: 
-      Date:   
+      Author: Christopher Kim
+      Date:   1.16.19
 
       Filename:   sb_payment.html
 
@@ -19,12 +19,48 @@
    <title>Spice Bowl Payment Form</title>
    <link href="sb_reset.css" rel="stylesheet" />
    <link href="sb_styles.css" rel="stylesheet" />
+   <link rel="stylesheet" href="sb_forms.css">
+   <link rel="stylesheet" href="sb_validate.css">
+   <script src="sb_script.js"></script>
 </head>
 
 <body>
+
    <header>
       <img src="sb_logo.png" alt="The Spice Bowl" />
+      <form id="login"  action="http://www.example.com/sb/login" method="POST">
+        <input type="text" name="username" id="userBox" placeholder="Username">
+        <input type="text" name="password" id="pwdBox" placeholder="Password"> 
+      </form>
+      <h1>Payment Form</h1>
+      <form id="payment" action="http://www.example.com/sb/payment" method="POST">
+        <fieldset id="billing">
+            <legend>Billing Information</legend>
+            <label for="firstName">First Name*</label>
+            <input type="text" id="firstBox" required>
+        
+            <label for="lastName">Last Name*</label>
+            <input type="text" id="lastBox" required>
 
+            <label for="street1">Street Address*</label>
+            <textarea type="text" id="streetBox" required></textarea>
+
+            <label for="street2">Street Address (2)</label>
+            <input type="text" id="streetBox2">
+
+            <label for="city">City*</label>
+            <input type="text" id="cityBox" required>
+
+            <label for="state">State</label>
+            <input type="text" id="idBox" placeholder="acgip-nnnnnn" pattern="^acgip\-\d{6}$">
+            
+            <label for="zip">ZIP/Postal Code</label>
+            <input type="text" id="">
+
+            <label for="phoneNumber">Phone Number</label>
+            <input type="tel" id="phoneBox" name="custPhone" placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" required>
+        </fieldset>
+        </form>
       <nav> <a id="navicon" href="#"><img src="sb_navicon.png" alt="" /></a>
          <ul>
             <li><a href="#">Spices</a></li>
@@ -108,4 +144,5 @@
       </nav>
    </footer>         
 </body>
+
 </html>
