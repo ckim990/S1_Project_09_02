@@ -12,7 +12,7 @@
 */
 
 /* Validation Styles */
-/* Every input elemnet that doestn have the type of radio will be  */
+/* Every input element that doesn't have the type of radio will be colored and have a picture */
 input:not([type='radio']):focus {
    background-color: rgb(255, 218, 165);
 }

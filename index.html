@@ -46,6 +46,7 @@
    </header>
 
    <section>
+      <!-- Form that is made up of input boxes and a data list -->
       <h1>Payment Form</h1>
       <form id="payment" action="http://www.example.com/sb/payment" method="POST">
          <fieldset id="billing">
@@ -77,7 +78,7 @@
             <!-- Phone -->
             <label for="phone">Phone</label>
             <input type="tel" id="phoneBox" required pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$">
-            <!-- Data List -->
+            <!-- Data List with state abbreviations -->
             <datalist id="stateList">
                <option value="AL" />
                <option value="AK" />
@@ -131,6 +132,7 @@
             </datalist>
          </fieldset>
          <fieldset id="creditCard">
+            <!-- This section is made for inputing credit card info and has pictures -->
             <legend>Credit Card (Required)</legend>
             <fieldset>
                <!-- Amex -->
@@ -138,7 +140,7 @@
                   <input type="radio" value="Amex" name="ccard" id="ccard" required />
                   <img src="sb_amex.png" alt="Amex">
                </label>
-               <!-- Discorver -->
+               <!-- Discover -->
                <label for="cardLabel" class="cardLabel">
                   <input value="Discorver" type="radio" name="ccard" id="ccard" required />
                   <img src="sb_discover.png" alt="Discorver">
@@ -157,7 +159,7 @@
 
             <label for="cardBox">Credit Card Number</label>
             <input type="text" id="cardBox" name="cardNumber" required pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$">
-
+            <!-- An option list for expiration dates -->
             <label for="monthList">Expiration Date</label>
             <select name="monthList" id="monthList" required>
                <option value="">--Month--</option>
